@@ -142,4 +142,114 @@ const isMultipleOfThree = (num) => {
   return false;
 };
 
-console.log(isMultipleOfThree(8));
+// console.log(isMultipleOfThree(8));
+
+/**  10. Write a function which takes in a number as input and returns it after multiplying by 10.
+
+ console.log(multiplyByTen(20)) // 200
+ console.log(multiplyByTen(40)) // 400  */
+
+const multiplyByTen = (num) => {
+  return num * 10;
+};
+
+// console.log(multiplyByTen(9));
+
+/**  11. Console individual values of the product object using object destructuring.
+ const product = {
+  title: 'iPhone',
+  price: 5999,
+  description: 'The iPhone is a smartphone developed by Apple',
+ }
+
+
+ console.log(title) // iPhone
+ console.log(price) // 5999
+ console.log(description) // The iPhone is a smartphone developed by Apple */
+
+const product = {
+  title: "iPhone",
+  price: 5999,
+  description: "The iPhone is a smartphone developed by Apple",
+};
+
+const { title, price, description } = product;
+
+// console.log(title);
+// console.log(price);
+// console.log(description);
+
+/** 12. Create an object book with properties title, author, and pages. Create a function getBookDetails
+ that takes a book object as a parameter and returns if the book has more than 100 pages.
+
+ 
+ console.log(getBookDetails(book)) // logs 'true' if the pages are above 100
+ console.log(getBookDetails(book)) // logs 'false' if the pages are 100 or below
+  
+ */
+
+const book = {
+  title: "Harry Potter",
+  auther: "hum",
+  pages: 200,
+};
+
+const getBookDetails = (book) => {
+  if (book.pages > 100) {
+    return true;
+  }
+  return false;
+};
+
+// console.log(getBookDetails(book));
+
+/**  13. Create a function changeOccupation that takes an object person and a string newOccupation as parameters, and changes the occupation property of the person object to the newOccupation.
+
+ Log the person object to the console before and after calling the function. */
+
+const person = {
+  name: "kunal",
+  age: 20,
+  occupation: "student",
+};
+// console.log(person);
+const changeOccupation = (person, newOccupation) => {
+  return (person.occupation = newOccupation);
+};
+
+// console.log(changeOccupation(person, "Software Developer"));
+// console.log(person);
+
+/** 14. Given an array numbers containing the numbers 1, 2, and 3. Use array destructuring to log each
+ number to the console.
+ const numbers = [1, 2, 3]
+
+ console.log(a) // logs 1 to the console
+ console.log(b) // logs 2 to the console
+ console.log(c) // logs 3 to the console */
+
+const numbers = [1, 2, 3];
+
+const [a, b, c] = numbers;
+// console.log(a);
+// console.log(b);
+// console.log(c);
+
+/**  15. Convert the given function into ES6 with least amount of characters.
+ function defaultParamsFunc(a, b, c) {
+ if (c === undefined) {
+    c = 4
+ }
+ return a * b * c
+ }
+
+ console.log(defaultParamsFunc(3, 1)) // 12
+ console.log(defaultParamsFunc(3, 10)) // 120
+ 
+ */
+
+const defaultParamsFunc = (a, b, c) =>
+  c === undefined ? a * b * 4 : a * b * c;
+
+
+console.log(defaultParamsFunc(10,20));
